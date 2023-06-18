@@ -1,0 +1,48 @@
+unit Ulistpenjualan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, MemDS, DBAccess, MyAccess;
+
+type
+  TFlistpenjualan = class(TForm)
+    Panel1: TPanel;
+    Splitter1: TSplitter;
+    Splitter2: TSplitter;
+    Splitter3: TSplitter;
+    Splitter4: TSplitter;
+    Btambah: TButton;
+    Btedit: TButton;
+    Bthapus: TButton;
+    Btrefresh: TButton;
+    Panel2: TPanel;
+    Label1: TLabel;
+    Splitter5: TSplitter;
+    Edcari: TEdit;
+    DBGrid1: TDBGrid;
+    Qpenjualan: TMyQuery;
+    DSpenjualan: TDataSource;
+    Qpenjualankode_penjualan: TStringField;
+    Qpenjualantgl_penjualan: TDateField;
+    Qpenjualankode_pelanggan: TStringField;
+    Qpenjualanno_bukti: TStringField;
+    Qpenjualannama_pelanggan: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Flistpenjualan: TFlistpenjualan;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM, Myfunction;
+
+end.

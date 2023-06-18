@@ -1,0 +1,57 @@
+object Fmainmenu: TFmainmenu
+  Left = 0
+  Top = 0
+  Caption = 'Fmainmenu'
+  ClientHeight = 201
+  ClientWidth = 447
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 312
+    Top = 136
+    object file1: TMenuItem
+      Caption = 'file'
+      OnClick = file1Click
+      object file2: TMenuItem
+        Caption = 'exit'
+      end
+      object listpembelian1: TMenuItem
+        Caption = 'listpembelian'
+        OnClick = listpembelian1Click
+      end
+    end
+    object ulistbarang1: TMenuItem
+      Caption = 'barang'
+      OnClick = ulistbarang1Click
+    end
+    object listbarang1: TMenuItem
+      Caption = 'listbarang'
+      OnClick = listbarang1Click
+    end
+    object pelanggan1: TMenuItem
+      Caption = 'pelanggan'
+      OnClick = pelanggan1Click
+    end
+    object listpelanggan1: TMenuItem
+      Caption = 'listpelanggan'
+      OnClick = listpelanggan1Click
+    end
+    object supplier1: TMenuItem
+      Caption = 'supplier'
+      OnClick = supplier1Click
+    end
+    object supplier2: TMenuItem
+      Caption = 'listsupplier'
+      OnClick = supplier2Click
+    end
+  end
+end

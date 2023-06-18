@@ -1,0 +1,36 @@
+unit Upelanggan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFpelanggan = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edkodepelanggan: TEdit;
+    Ednamapelanggan: TEdit;
+    Memo1: TMemo;
+    Ednotelpon: TEdit;
+    Panel1: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Splitter1: TSplitter;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fpelanggan: TFpelanggan;
+
+implementation
+
+{$R *.dfm}
+
+end.

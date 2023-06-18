@@ -1,0 +1,61 @@
+unit Upenjualan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Datasnap.DBClient, Vcl.Menus;
+
+type
+  TFpenjualan = class(TForm)
+    Label2: TLabel;
+    Edkodepenjualan: TEdit;
+    Label1: TLabel;
+    Dtpenjualan: TDateTimePicker;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cbnama_pelanggan: TComboBox;
+    Edkodepelanggan: TEdit;
+    Ednobukti: TEdit;
+    DBGrid1: TDBGrid;
+    Panel1: TPanel;
+    Splitter1: TSplitter;
+    Btcancel: TButton;
+    Btsimpan: TButton;
+    CDS1: TClientDataSet;
+    PopupMenu1: TPopupMenu;
+    DataSource1: TDataSource;
+    CDS1kode_barang: TStringField;
+    CDS1nama_barang: TStringField;
+    CDS1satuan: TStringField;
+    CDS1harga_jual: TFloatField;
+    CDS1qty: TFloatField;
+    CDS1sub_total: TFloatField;
+    insert1: TMenuItem;
+    edit1: TMenuItem;
+    delete1: TMenuItem;
+    Panel2: TPanel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit2: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fpenjualan: TFpenjualan;
+
+implementation
+
+{$R *.dfm}
+
+uses Ulistpenjualan, Myfunction, UDM;
+
+end.

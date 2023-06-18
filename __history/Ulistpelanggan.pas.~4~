@@ -1,0 +1,70 @@
+unit Ulistpelanggan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, MemDS, DBAccess, MyAccess,
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFlistpelanggan = class(TForm)
+    Qpelanggan: TMyQuery;
+    DSpelanggan: TDataSource;
+    Panel1: TPanel;
+    Btambah: TButton;
+    Btedit: TButton;
+    Bthapus: TButton;
+    Btrefresh: TButton;
+    Splitter1: TSplitter;
+    Splitter2: TSplitter;
+    Splitter3: TSplitter;
+    Splitter4: TSplitter;
+    Panel2: TPanel;
+    Label1: TLabel;
+    Splitter5: TSplitter;
+    Edit1: TEdit;
+    DBGrid1: TDBGrid;
+    Qpelanggankode_pelanggan: TStringField;
+    Qpelanggannama_pelanggan: TStringField;
+    Qpelangganalamat: TMemoField;
+    Qpelangganno_telp: TStringField;
+    procedure BtambahClick(Sender: TObject);
+    procedure BteditClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Flistpelanggan: TFlistpelanggan;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM, Myfunction, Upelanggan;
+
+procedure TFlistpelanggan.BtambahClick(Sender: TObject);
+begin
+application.createform(tflistpelanggan,flistpelanggan);
+status_simpan := 1;
+cflg_aktif :=0;
+Fpelanggan.edkodepelanggan.text := autokode('kode_pelanggan','pelanggan','pl');
+fpelanggan.showmodal;
+fpelanggan.free;
+end;
+
+procedure TFlistpelanggan.BteditClick(Sender: TObject);
+begin
+application.createform(tflistpelanggan,flistpelanggan);
+status_simpan :=2;
+fpelanggan.Edkodepelanggan.text:= qpelanggankode_pelanggan.asstring;
+fpelanggan.Ednamapelanggan.text:= qpelanggannama_pelanggan.asstring;
+fpelanggan.Ednotelpon.text:= qpelangganno_telp.asstring;
+fpelanggan.edmemoalamat.text
+
+end;
+
+end.

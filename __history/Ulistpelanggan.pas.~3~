@@ -1,0 +1,52 @@
+unit Ulistpelanggan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, MemDS, DBAccess, MyAccess,
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFlistpelanggan = class(TForm)
+    Qpelanggan: TMyQuery;
+    DSpelanggan: TDataSource;
+    Panel1: TPanel;
+    Btambah: TButton;
+    Btedit: TButton;
+    Bthapus: TButton;
+    Btrefresh: TButton;
+    Splitter1: TSplitter;
+    Splitter2: TSplitter;
+    Splitter3: TSplitter;
+    Splitter4: TSplitter;
+    Panel2: TPanel;
+    Label1: TLabel;
+    Splitter5: TSplitter;
+    Edit1: TEdit;
+    DBGrid1: TDBGrid;
+    procedure BtambahClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Flistpelanggan: TFlistpelanggan;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM, Myfunction;
+
+procedure TFlistpelanggan.BtambahClick(Sender: TObject);
+begin
+application.createform(tflistpelanggan,flistpelanggan);
+status_simpan := 1;
+cflg_aktif :=0;
+
+end;
+
+end.

@@ -1,0 +1,43 @@
+unit Upenjualan;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Data.DB,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Datasnap.DBClient, Vcl.Menus;
+
+type
+  TFpenjualan = class(TForm)
+    Label2: TLabel;
+    Edkodepenjualan: TEdit;
+    Label1: TLabel;
+    Dtpenjualan: TDateTimePicker;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    cbnama_pelanggan: TComboBox;
+    Edkodepelanggan: TEdit;
+    Ednobukti: TEdit;
+    DBGrid1: TDBGrid;
+    Panel1: TPanel;
+    Splitter1: TSplitter;
+    Btcancel: TButton;
+    Btsimpan: TButton;
+    ClientDataSet1: TClientDataSet;
+    PopupMenu1: TPopupMenu;
+    DataSource1: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fpenjualan: TFpenjualan;
+
+implementation
+
+{$R *.dfm}
+
+end.

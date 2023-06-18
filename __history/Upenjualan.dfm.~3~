@@ -1,0 +1,88 @@
+object Fpenjualan: TFpenjualan
+  Left = 0
+  Top = 0
+  Caption = 'Fpenjualan'
+  ClientHeight = 332
+  ClientWidth = 546
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 40
+    Top = 27
+    Width = 77
+    Height = 13
+    Caption = 'Kode penjualan '
+  end
+  object Label1: TLabel
+    Left = 40
+    Top = 59
+    Width = 36
+    Height = 13
+    Caption = 'tanggal'
+  end
+  object Label3: TLabel
+    Left = 37
+    Top = 99
+    Width = 80
+    Height = 13
+    Caption = 'Nama pelanggan'
+  end
+  object Label4: TLabel
+    Left = 37
+    Top = 128
+    Width = 77
+    Height = 13
+    Caption = 'Kode pelanggan'
+  end
+  object Label5: TLabel
+    Left = 37
+    Top = 155
+    Width = 78
+    Height = 13
+    Caption = 'No BuktiKwitansi'
+  end
+  object Edkodepenjualan: TEdit
+    Left = 144
+    Top = 24
+    Width = 153
+    Height = 21
+    TabOrder = 0
+  end
+  object Dtpenjualan: TDateTimePicker
+    Left = 144
+    Top = 59
+    Width = 186
+    Height = 21
+    Date = 45087.000000000000000000
+    Time = 0.417601018518325900
+    TabOrder = 1
+  end
+  object cbnama_pelanggan: TComboBox
+    Left = 144
+    Top = 96
+    Width = 186
+    Height = 21
+    TabOrder = 2
+  end
+  object Edkodepelanggan: TEdit
+    Left = 144
+    Top = 123
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object Ednobukti: TEdit
+    Left = 144
+    Top = 152
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+end

@@ -1,0 +1,79 @@
+unit Usupplier;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TFsupplier = class(TForm)
+    Edkodesupplier: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Ednamasupplier: TEdit;
+    EdMemoalamat: TMemo;
+    Ednotelpon: TEdit;
+    Panel1: TPanel;
+    Splitter1: TSplitter;
+    Btcancel: TButton;
+    Btsimpan: TButton;
+    procedure BtsimpanClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fsupplier: TFsupplier;
+
+implementation
+
+{$R *.dfm}
+
+uses Myfunction, UDM;
+
+procedure TFsupplier.BtsimpanClick(Sender: TObject);
+begin
+if edkodesupplier.text='' then
+begin
+  messagedlg('kode supplier tidak boleh kosong',mtwarning,[mbok],0);
+  exit;
+end;
+if ednamasupplier.text='' then
+begin
+  messagedlg('nama supplier tidak boleh kosong',mtwarning,[mbok],0);
+  exit;
+end;
+if ednotelpon.text='' then
+begin
+  messagedlg('no telp tidak boleh kosong',mtwarning,[mbok],0);
+  exit;
+end;
+  //tambah
+ if status_simpan=1 then
+ begin
+   with dm.qtemp do
+   begin
+     close;
+     sql.clear;
+     sql.Text:='insert into dbpost1.pelanggan(kode_supplier,nama_supplier,alamat,'+
+     'no_telp)values('+
+     quotedstr(edkodesupplier.Text)+','+
+     quotedstr(ednamasupplier.text)+','+
+     quotedstr(edmemoalamat.text)+','+
+     quotedstr(ednotelpon.Text)+')';
+     execute;
+   end;
+   messagedlg('tambah data berhasil',mtinformation,[mbok],0);
+ end;
+
+
+end;
+
+
+
+end.

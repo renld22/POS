@@ -1,0 +1,46 @@
+unit Upembelian;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Data.DB,
+  Datasnap.DBClient, Vcl.Menus, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls;
+
+type
+  TFpembelian = class(TForm)
+    Label2: TLabel;
+    Label1: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edkodepembelian: TEdit;
+    DateTimePicker1: TDateTimePicker;
+    ComboBox1: TComboBox;
+    Edkodesupplier: TEdit;
+    Ednobuktikwitansi: TEdit;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    PopupMenu1: TPopupMenu;
+    CDS1: TClientDataSet;
+    Panel1: TPanel;
+    Splitter1: TSplitter;
+    Btcancel: TButton;
+    Btsimpan: TButton;
+    insert1: TMenuItem;
+    edit1: TMenuItem;
+    edit2: TMenuItem;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fpembelian: TFpembelian;
+
+implementation
+
+{$R *.dfm}
+
+end.
